@@ -10,3 +10,4 @@ jobs:
         run: |
           curl --request POST \
           --url 'https://slack-pagespeed.vercel.app/api/cron' 
+          
