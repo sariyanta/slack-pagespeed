@@ -1,0 +1,26 @@
+{
+  "name": "slack-pagespeed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sariyanta/slack-pagespeed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sariyanta/slack-pagespeed/issues"
+  },
+  "homepage": "https://github.com/sariyanta/slack-pagespeed#readme",
+  "dependencies": {
+    "@slack/web-api": "^6.8.0",
+    "dotenv": "^16.0.3",
+    "psi": "^4.1.0"
+  }
+}
