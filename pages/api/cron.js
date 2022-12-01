@@ -2,7 +2,6 @@ import psi from 'psi';
 import { WebClient } from '@slack/web-api';
 
 const web = new WebClient(process.env.SLACK_TOKEN);
-
 const websites = [
   'https://www.bmair.com/en/',
   'https://www.bobautowas.nl/',
@@ -28,22 +27,22 @@ const websites = [
   'https://werkenbij.radine.nl/',
   'https://www.wijzonol.nl/consument/',
 ]
+export default async function handler(req, res) {
+  
+  if (req.method === 'POST') {
+    websites.forEach( async function (website)  {
 
-
-
-
-  websites.forEach( async function (website)  {
-
-    let data = await getPSIScore(website);
-
-    const {mobile, desktop} = data;
-
-    if (mobile < 0.6 || desktop < 0.6){
-      sendSlackMessage(data);
-    }
- 
-  })
-
+      let data = await getPSIScore(website);
+  
+      const {mobile, desktop} = data;
+  
+      if (mobile < 0.6 || desktop < 0.6){
+        sendSlackMessage(data);
+      }
+   
+    })
+  }
+}
 
 
 async function sendSlackMessage(data){
