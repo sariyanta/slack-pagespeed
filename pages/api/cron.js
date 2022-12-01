@@ -3,8 +3,6 @@ import { WebClient } from '@slack/web-api';
 
 const web = new WebClient(process.env.SLACK_TOKEN);
 
-
-
 const websites = [
   'https://www.bmair.com/en/',
   'https://www.bobautowas.nl/',
